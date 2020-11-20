@@ -13,7 +13,7 @@ public interface BusinessDao {
     // 删除商家
     public int removeBusiness(int businessId);
     // 修改商家
-    public int supdateBusiness(Business business);
+    public int updateBusiness(Business business);
     // 通过id查询
-    public Business getBusinessById();
+    public Business getBusinessById(Integer businessId);
 }
