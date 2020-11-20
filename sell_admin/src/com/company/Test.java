@@ -8,10 +8,14 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
+//        BusinessDaolmpl dao = new BusinessDaolmpl();
+//        List<Business> businessList = dao.listBusiness();
+//        for(Business b : businessList){
+//            System.out.println(b);
+//        }
         BusinessDaolmpl dao = new BusinessDaolmpl();
-        List<Business> businessList = dao.listBusiness();
-        for(Business b : businessList){
-            System.out.println(b);
-        }
+
+        int businessid = dao.saveBusiness("江科大食堂");
+        System.out.println("id" + businessid);
     }
 }
