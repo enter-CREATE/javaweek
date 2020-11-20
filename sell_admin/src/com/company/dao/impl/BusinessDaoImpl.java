@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BusinessDaolmpl implements BusinessDao {
+public class BusinessDaoImpl implements BusinessDao {
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;

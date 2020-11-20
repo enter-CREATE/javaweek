@@ -1,9 +1,6 @@
 package com.company;
 
-import com.company.dao.impl.BusinessDaolmpl;
-import com.company.domain.Business;
-
-import java.util.List;
+import com.company.dao.impl.BusinessDaoImpl;
 
 
 public class Test {
@@ -13,7 +10,7 @@ public class Test {
 //        for(Business b : businessList){
 //            System.out.println(b);
 //        }
-        BusinessDaolmpl dao = new BusinessDaolmpl();
+        BusinessDaoImpl dao = new BusinessDaoImpl();
 
 //        int businessid = dao.saveBusiness("江科大食堂");
 //        System.out.println("id" + businessid);
@@ -22,6 +19,6 @@ public class Test {
 //        business.setBusinessName("奥特曼");
 //        business.setBusinessId(10012);
 //        dao.updateBusiness(business);
-        
+
     }
 }
