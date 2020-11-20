@@ -15,7 +15,8 @@ public class Test {
 //        }
         BusinessDaolmpl dao = new BusinessDaolmpl();
 
-        int businessid = dao.saveBusiness("江科大食堂");
-        System.out.println("id" + businessid);
+//        int businessid = dao.saveBusiness("江科大食堂");
+//        System.out.println("id" + businessid);
+        dao.removeBusiness(10015);
     }
 }
