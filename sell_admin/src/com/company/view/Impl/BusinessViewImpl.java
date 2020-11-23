@@ -90,4 +90,30 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
 
         return dao.getBusinessByIdAndPassword(businessId,password);
     }
+
+    @Override
+    public void updatePassword(Integer businessId){
+        BusinessDao dao=new BusinessDaoImpl();
+        Business business=dao.getBusinessById(businessId);
+
+        System.out.println("请输入旧密码");
+        String oldPass=input.next();
+        System.out.println("请输入新密码");
+        String newPass=input.next();
+        System.out.println("请再次输入新密码");
+        String beginNewPass=input.next();
+        //进行密码校验
+        if (!business.getPassword().equals(oldPass)){
+            System.out.println("密码错误，请重新输入！");
+        }else if (!newPass.equals(beginNewPass)){
+            System.out.println("密码输入不一致，请重新输入！");
+        }else{
+            int res=dao.updateBusinessPassword(businessId,newPass);
+            if (res>0){
+                System.out.println("修改成功！");
+            }else{
+                System.out.println("修改失败！");
+            }
+        }
+    }
 }

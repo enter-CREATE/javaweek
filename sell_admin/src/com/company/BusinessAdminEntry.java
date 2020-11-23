@@ -32,16 +32,16 @@ public class BusinessAdminEntry {
                 menu = input.nextInt();
                 switch (menu){
                     case 1:
-                        businessView.listAllBusinesses();
+                        System.out.println("............");
                         break;
                     case 2:
-                        businessView.selectBusinesses();
+                        System.out.println("............");
                         break;
                     case 3:
-                        businessView.saveBusiness();
+                        businessView.updatePassword(business.getBusinessId());
                         break;
                     case 4:
-                        businessView.removeBusiness();
+                        System.out.println("............");
                         break;
                     case 5:
                         System.out.println("欢迎下次登录");
