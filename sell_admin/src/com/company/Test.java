@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.dao.impl.BusinessDaoImpl;
+import com.company.dao.Impl.BusinessDaoImpl;
 
 
 public class Test {

@@ -1,12 +1,10 @@
 package com.company.view.Impl;
 
 import com.company.dao.AdminDao;
-import com.company.dao.impl.AdminDaoImpl;
+import com.company.dao.Impl.AdminDaoImpl;
 import com.company.domain.Admin;
 import com.company.view.AdminView;
 
-import javax.sound.midi.Soundbank;
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Scanner;
 
 public class AdminViewImpl implements AdminView{
@@ -21,4 +19,5 @@ public class AdminViewImpl implements AdminView{
         Admin admin = dao.getAdminByNameAndPassword(adminName, password);
         return admin;
     }
+
 }

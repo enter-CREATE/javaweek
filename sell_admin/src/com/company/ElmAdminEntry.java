@@ -1,11 +1,13 @@
 package com.company;
 
 import com.company.dao.BusinessDao;
-import com.company.dao.impl.BusinessDaoImpl;
+import com.company.dao.Impl.BusinessDaoImpl;
 import com.company.domain.Admin;
 import com.company.domain.Business;
 import com.company.view.AdminView;
+import com.company.view.BusinessView;
 import com.company.view.Impl.AdminViewImpl;
+import com.company.view.Impl.BusinessViewImpl;
 
 import java.util.List;
 import java.util.Scanner;
@@ -25,7 +27,7 @@ public class ElmAdminEntry {
         System.out.println("-----------------------------------");
 
         AdminView adminView = new AdminViewImpl();
-        BusinessDao businessDao = new BusinessDaoImpl();
+        BusinessView businessView=new BusinessViewImpl();
         Admin admin = adminView.login();
         int menu = 0;
         if (admin != null){
@@ -36,19 +38,16 @@ public class ElmAdminEntry {
                 menu = input.nextInt();
                 switch (menu){
                     case 1:
-                        List<Business> businesses = businessDao.listBusiness();
-                        for (Business b : businesses){
-                            System.out.println(b);
-                        }
+                        businessView.listAllBusinesses();
                         break;
                     case 2:
-                        System.out.println("搜索商家");
+                        businessView.selectBusinesses();
                         break;
                     case 3:
-                        System.out.println("搜索商家");
+                        System.out.println("新建商家");
                         break;
                     case 4:
-                        System.out.println("搜索商家");
+                        System.out.println("删除商家");
                         break;
                     case 5:
                         System.out.println("欢迎下次登录");

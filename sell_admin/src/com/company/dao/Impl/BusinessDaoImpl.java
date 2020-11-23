@@ -1,4 +1,4 @@
-package com.company.dao.impl;
+package com.company.dao.Impl;
 
 import com.company.dao.BusinessDao;
 import com.company.domain.Business;
@@ -16,17 +16,30 @@ public class BusinessDaoImpl implements BusinessDao {
     PreparedStatement pst = null;
     ResultSet rs = null;
     @Override
-    public List<Business> listBusiness() {
+    public List<Business> listBusiness(String businessName,String businessAddress) {
         ArrayList<Business> list = new ArrayList<>();
-        String sql = "select * from business";
+//        String sql = "select * from business";
+        StringBuffer sql=new StringBuffer("select * from business where 1=1");
+        if (businessName !=null && !businessName.equals("")){
+            sql.append(" and businessName LIKE '%"+businessName+"%'");
+        }
+        if (businessAddress !=null && !businessAddress.equals("")){
+            sql.append(" and businessAddress LIKE '%"+businessAddress+"%'");
+        }
+//        System.out.println("sql = "+sql.toString());
         try {
             conn = JDBCUtils.getConnection();
-            pst = conn.prepareStatement(sql);
+            pst = conn.prepareStatement(sql.toString());
             rs = pst.executeQuery();
             while (rs.next()){
                 Business business = new Business();
-                String businessName = rs.getString(3);
-                business.setBusinessName(businessName);
+                business.setBusinessId(rs.getInt("businessId"));
+                business.setPassword(rs.getString("password"));
+                business.setBusinessName(rs.getString("businessName"));
+                business.setBusinessAddress(rs.getString("businessAddress"));
+                business.setBusinessExplain(rs.getString("businessExplain"));
+                business.setStartPrice(rs.getDouble("starPrice"));
+                business.setDeliveryPrice(rs.getDouble("deliveryPrice"));
                 list.add(business);
             }
 
