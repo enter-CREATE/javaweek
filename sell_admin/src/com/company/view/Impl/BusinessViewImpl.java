@@ -129,6 +129,7 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
             System.out.println("查无此商家id");
         }else{
             System.out.println("商家信息如下："+dao.getBusinessById(id));
+            System.out.println("请选择：1、修改名称  2、修改地址   3、修改备注  4、修改配送费  5、修改起送费  ");
 
         }
     }
