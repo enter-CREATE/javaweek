@@ -116,4 +116,22 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
             }
         }
     }
+
+    @Override
+    public void updateBusiness(Integer businessId){
+        BusinessDao dao=new BusinessDaoImpl();
+        Business business=dao.getBusinessById(businessId);
+
+        System.out.println("请输入要修改的商家id");
+        Integer id=input.nextInt();
+
+        if (!business.getBusinessId().equals(id)){
+            System.out.println("查无此商家id");
+        }else{
+            System.out.println("商家信息如下："+dao.getBusinessById(id));
+
+        }
+    }
+
+
 }
