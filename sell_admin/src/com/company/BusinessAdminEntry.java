@@ -22,6 +22,7 @@ public class BusinessAdminEntry {
         System.out.println("---------饿了么商家自主管理系统----------");
         System.out.println("-----------------------------------");
 
+        //商家登录
         BusinessView businessView=new BusinessViewImpl();
         Business business=businessView.login();
         int menu = 0;

@@ -20,5 +20,6 @@ public interface BusinessDao {
     public Business getBusinessByIdAndPassword(Integer businessId,String password);
     //更新密码
     public int updateBusinessPassword(Integer businessId,String password);
+    //商家信息
     public List<Business> listOneBusiness(Integer businessId);
 }

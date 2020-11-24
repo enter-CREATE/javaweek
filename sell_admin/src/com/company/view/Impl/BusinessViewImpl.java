@@ -120,15 +120,16 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
     @Override
     public void updateBusiness(Integer businessId){
         BusinessDao dao=new BusinessDaoImpl();
+
         Business business=dao.getBusinessById(businessId);
-        int menus=0;
+        int menu=0;
         int res=0;
-        while (menus!=6){
-            System.out.println("请选择：1、修改名称  2、修改地址   3、修改备注  4、修改配送费  5、修改起送费  ");
+        while (menu!=6){
+            System.out.println(">>> 二级菜单    1、修改名称  2、修改地址   3、修改备注  4、修改配送费  5、修改起送费  6、返回上层");
             System.out.println("请输入你的选择：");
-            menus=input.nextInt();
+            menu=input.nextInt();
             System.out.println("请输入修改的内容：");
-                switch (menus){
+                switch (menu){
                     case 1:
                         String txt1=input.next();
                         business.setBusinessName(txt1);
@@ -154,6 +155,8 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
                         business.setDeliveryPrice(txt5);
                         res=dao.updateBusiness(business);
                         break;
+                    case 6:
+                        break;
                     default:
                         System.out.println("没有此选择！");
                         break;
@@ -164,7 +167,6 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
                     System.out.println("修改商家失败！");
                 }
             }
-
     }
 
     @Override
