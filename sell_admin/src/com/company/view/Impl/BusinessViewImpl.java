@@ -121,17 +121,51 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
     public void updateBusiness(Integer businessId){
         BusinessDao dao=new BusinessDaoImpl();
         Business business=dao.getBusinessById(businessId);
+        int menus=0;
+        int res=0;
 
-        System.out.println("请输入要修改的商家id");
-        Integer id=input.nextInt();
+            while (menus!=6){
+                System.out.println("请选择：1、修改名称  2、修改地址   3、修改备注  4、修改配送费  5、修改起送费  ");
+                System.out.println("请输入你的选择：");
+                menus=input.nextInt();
+                System.out.println("请输入修改的内容：");
+                switch (menus){
+                    case 1:
+                        String txt1=input.next();
+                        business.setBusinessName(txt1);
+                        res=dao.updateBusiness(business);
+                        break;
+                    case 2:
+                        String txt2=input.next();
+                        business.setBusinessAddress(txt2);
+                        res=dao.updateBusiness(business);
+                        break;
+                    case 3:
+                        String txt3=input.next();
+                        business.setBusinessExplain(txt3);
+                        res=dao.updateBusiness(business);
+                        break;
+                    case 4:
+                        double txt4=input.nextInt();
+                        business.setStartPrice(txt4);
+                        res=dao.updateBusiness(business);
+                        break;
+                    case 5:
+                        double txt5=input.nextInt();
+                        business.setDeliveryPrice(txt5);
+                        res=dao.updateBusiness(business);
+                        break;
+                    default:
+                        System.out.println("没有此选择！");
+                        break;
+                }
+                if (res>0){
+                    System.out.println("修改商家成功！");
+                }else{
+                    System.out.println("修改商家失败！");
+                }
+            }
 
-        if (!business.getBusinessId().equals(id)){
-            System.out.println("查无此商家id");
-        }else{
-            System.out.println("商家信息如下："+dao.getBusinessById(id));
-            System.out.println("请选择：1、修改名称  2、修改地址   3、修改备注  4、修改配送费  5、修改起送费  ");
-
-        }
     }
 
     @Override
