@@ -8,8 +8,9 @@ public interface BusinessView {
     public void saveBusiness();
     public void removeBusiness();
 
-
     public Business login();
     public void updatePassword(Integer businessId);
+
     public void updateBusiness(Integer businessId);
+    public void listOneBusiness(Integer businessId);
 }

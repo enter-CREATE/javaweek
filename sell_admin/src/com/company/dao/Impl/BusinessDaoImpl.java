@@ -209,6 +209,34 @@ public class BusinessDaoImpl implements BusinessDao {
         return res;
     }
 
+    @Override
+    public List<Business> listOneBusiness(Integer businessId){
+        ArrayList<Business> list = new ArrayList<>();
+        StringBuffer sql=new StringBuffer("select * from business where 1=1");
+        if (businessId !=null && !businessId.equals("")){
+            sql.append(" and businessId="+businessId);
+        }
+        try {
+            conn = JDBCUtils.getConnection();
+            pst = conn.prepareStatement(sql.toString());
+            rs = pst.executeQuery();
+            while (rs.next()){
+                Business business = new Business();
+                business.setBusinessId(rs.getInt("businessId"));
+                business.setBusinessName(rs.getString("businessName"));
+                business.setBusinessAddress(rs.getString("businessAddress"));
+                business.setBusinessExplain(rs.getString("businessExplain"));
+                business.setStartPrice(rs.getDouble("starPrice"));
+                business.setDeliveryPrice(rs.getDouble("deliveryPrice"));
+                list.add(business);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return list;
+    }
 
 
 }

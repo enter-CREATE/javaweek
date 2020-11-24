@@ -33,7 +33,7 @@ public class BusinessAdminEntry {
                 menu = input.nextInt();
                 switch (menu){
                     case 1:
-                        System.out.println("............");
+                        businessView.listOneBusiness(business.getBusinessId());
                         break;
                     case 2:
                         businessView.updateBusiness(business.getBusinessId());
@@ -85,7 +85,7 @@ public class BusinessAdminEntry {
                 case 5:
                     break;
                 default:
-                    System.out.println("没哟这个选项");
+                    System.out.println("没有这个选项");
                     break;
 
             }

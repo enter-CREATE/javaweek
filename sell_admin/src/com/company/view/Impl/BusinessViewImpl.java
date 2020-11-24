@@ -133,5 +133,15 @@ public class BusinessViewImpl implements com.company.view.BusinessView {
         }
     }
 
+    @Override
+    public void listOneBusiness(Integer businessId){
+        BusinessDao dao=new BusinessDaoImpl();
+        List<Business> list=dao.listOneBusiness(businessId);
+        System.out.println("商家编号"+"\t"+"商家名称"+"\t"+"商家地址"+"\t"+"商家备注"+"\t"+"商家配送费"+"\t"+"商家起送费");
+        for (Business b :list){
+            System.out.println(b.getBusinessId() +"\t"+b.getBusinessName()+"\t"+b.getBusinessAddress()+"\t"+b.getBusinessExplain()+"\t"+b.getDeliveryPrice()+"\t"+b.getStartPrice());
+        }
+    }
+
 
 }
