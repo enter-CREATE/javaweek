@@ -15,7 +15,7 @@ import java.math.BigDecimal;
  */
 @Entity
 @Data
-public class LuckMoney {
+public class LuckyMoney {
     //@Data lombok插件的一个注解，表示此注解的实体类不用写set，get方法
     //@Entity指定该类为实体类，@Id代表主键,@GeneratedValue自增长
     @Id
@@ -27,7 +27,7 @@ public class LuckMoney {
     private String producer;
     //收红包的人
     private String consumer;
-    public LuckMoney(){
+    public LuckyMoney(){
 
     }
 

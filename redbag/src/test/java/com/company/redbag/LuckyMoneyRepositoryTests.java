@@ -15,8 +15,8 @@ public class LuckyMoneyRepositoryTests {
     private LuckyMoneyRepository repository;
     @Test
     public void listAll(){
-        List<LuckMoney> list= repository.findAll();
-        for (LuckMoney luckyMoney: list) {
+        List<LuckyMoney> list= repository.findAll();
+        for (LuckyMoney luckyMoney: list) {
             System.out.println(luckyMoney);
         }
     }
