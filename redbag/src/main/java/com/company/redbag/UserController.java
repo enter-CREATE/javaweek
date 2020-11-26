@@ -1,8 +1,11 @@
 package com.company.redbag;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,35 +15,42 @@ public class UserController {
     @Autowired
     private UserRepository repository;
 
-    @GetMapping("/list")
-    public List<User> list(){
-        return repository.findAll();
-    }
-
-    @PostMapping("/post")
-    public User postUser(@RequestParam(value = "username",required = true)String username,@RequestParam(value = "password",required = true)String password){
-        User user=new User();
-        user.setUsername(username);
-        user.setPassword(password);
+    @PostMapping()
+    public User save(@RequestBody User user){
         return repository.save(user);
     }
 
-    @GetMapping("/find/{id}")
-    public User findById(@PathVariable("id")String id){
-        return repository.findById(id).orElse(null);
+    @GetMapping("/{id}")
+    public User getById(@PathVariable("id")String id){
+        Optional<User> optional = repository.findById(id);
+        // 假设获取不到前面的就会主动调用后面参数的内容
+        // 对象::new  创建对象的简写  jdk8以上
+        return optional.orElseGet(User::new);
     }
 
-    @PutMapping("/put/{id}")
-    public User put(@PathVariable("id")String id,
-                    @RequestParam("username")String username,
-                    @RequestParam("password")String password){
-        Optional<User> optional = repository.findById(id);
-        if (optional.isPresent()){
-            User user=optional.get();
-            user.setUsername(username);
-            user.setPassword(password);
-            return repository.save(user);
-        }
-        return null;
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable("id")String id){
+        repository.deleteById(id);
     }
+
+    @PutMapping("/{id}")
+    public User update(@PathVariable("id")String id,@RequestBody User user){
+        user.setId(id);
+        return repository.save(user);
+    }
+
+    /**
+     * 分页查询
+     * @param pageNum 页的开始，默认从0开始
+     * @param pageSize 每页几个 默认每页10条数据
+     * @return
+     */
+    @GetMapping("/list")
+    public Page<User> pageQuery(@RequestParam(value = "pageNum",defaultValue = "1")Integer pageNum,
+                                @RequestParam(value = "pageSize",defaultValue = "5")Integer pageSize){
+        PageRequest pageRequest=PageRequest.of(pageNum-1,pageSize);
+        return  repository.findAll(pageRequest);
+    }
+
+
 }
