@@ -22,16 +22,15 @@ public class OrderMasterRepositoryTests {
     public void saveTest(){
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setOrderId("1234567");
-        orderMaster.setUserName("小丸子");
-        orderMaster.setBuyerPhone("139999999999");
-        orderMaster.setBuyerAddress("江科大南门");
+        orderMaster.setUserName("西施");
+        orderMaster.setBuyerPhone("13515949899");
+        orderMaster.setBuyerAddress("西门");
         orderMaster.setBuyerOpenId(OPENID);
-        orderMaster.setOrderAmount(new BigDecimal(2.9));
+        orderMaster.setOrderAmount(new BigDecimal(6.4));
 
         OrderMaster result = repository.save(orderMaster);
-//        System.out.println(master);
+//        System.out.println(result);
         Assert.assertNotNull(result);
-
     }
 
 

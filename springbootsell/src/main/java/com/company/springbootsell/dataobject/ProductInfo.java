@@ -1,5 +1,6 @@
 package com.company.springbootsell.dataobject;
 
+import com.company.springbootsell.enums.ProductStatusEnum;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -30,7 +31,7 @@ public class ProductInfo {
     //图片
     private String productIcon;
     //状态 0正常 1已下架
-    private Integer productStatus = 0;
+    private Integer productStatus = ProductStatusEnum.UP.getCode();
     //类目编号
     private Integer categoryType;
     //创建时间
