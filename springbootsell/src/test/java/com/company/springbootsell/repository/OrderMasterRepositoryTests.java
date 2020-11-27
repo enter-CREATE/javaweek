@@ -16,17 +16,16 @@ public class OrderMasterRepositoryTests {
 
     @Autowired
     OrderMasterRepository repository;
-    private final String OPENID="1024";
-
+    private final String OPENID = "32233";
     @Test
     public void saveTest(){
         OrderMaster orderMaster = new OrderMaster();
         orderMaster.setOrderId("1234567");
-        orderMaster.setUserName("西施");
+        orderMaster.setUserName("阿古朵");
         orderMaster.setBuyerPhone("13515949899");
-        orderMaster.setBuyerAddress("西门");
+        orderMaster.setBuyerAddress("东门");
         orderMaster.setBuyerOpenId(OPENID);
-        orderMaster.setOrderAmount(new BigDecimal(6.4));
+        orderMaster.setOrderAmount(new BigDecimal("6.4"));
 
         OrderMaster result = repository.save(orderMaster);
 //        System.out.println(result);
