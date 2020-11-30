@@ -33,7 +33,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page<ProductInfo> findAll(Pageable pageable) {
         Page<ProductInfo> productInfoPage=repository.findAll(pageable);
-        //TODO
+
         return productInfoPage;
     }
 

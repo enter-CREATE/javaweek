@@ -9,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -31,6 +32,14 @@ public class OrderMasterRepositoryTests {
 //        System.out.println(result);
         Assert.assertNotNull(result);
     }
-
+    @Test
+    public void findAll(){
+        List<OrderMaster> list = repository.findAll();
+        System.out.println(list);
+    }
+    @Test
+    public void findOne(){
+        System.out.println(repository.findById("1234567"));
+    }
 
 }

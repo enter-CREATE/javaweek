@@ -21,7 +21,7 @@ public class SellerCategoryController {
     public ModelAndView list(Map<String ,Object> map){
         List<ProductCategory> list=categoryService.findAll();
         map.put("categoryList",list);
-        return new ModelAndView("category/listDeath",map);
+        return new ModelAndView("category/list",map);
 
     }
 }
