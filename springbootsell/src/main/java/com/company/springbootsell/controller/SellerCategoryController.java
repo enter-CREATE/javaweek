@@ -1,4 +1,4 @@
-package com.company.springbootsell.Controller;
+package com.company.springbootsell.controller;
 
 import com.company.springbootsell.dataobject.ProductCategory;
 import com.company.springbootsell.services.CategoryService;
@@ -18,10 +18,13 @@ public class SellerCategoryController {
     private CategoryService categoryService;
 
     @GetMapping("/list")
-    public ModelAndView list(Map<String ,Object> map){
-        List<ProductCategory> list=categoryService.findAll();
-        map.put("categoryList",list);
-        return new ModelAndView("category/list",map);
-
+    public ModelAndView list(Map<String, Object> map){
+        List<ProductCategory> list = categoryService.findAll();
+        for(ProductCategory p: list){
+            System.out.println(p);
+        }
+        // 将list添加到map中
+        map.put("categoryList", list);
+        return new ModelAndView("category/list", map);
     }
 }

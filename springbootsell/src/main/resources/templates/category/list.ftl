@@ -1,16 +1,13 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>商品类别显示</title>
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.0.1/css/bootstrap-theme.css">
-</head>
+<html>
+<#include "../common/header.ftl">
 <body>
-<div class="container">
-    <div class="row clearfix">
-        <div class="col-md-12 column">
-            <div class="page-header">
-                <h1>商品类别列表</h1>
+<div id="wrapper" class="toggled">
+    <#--    边栏nav-->
+    <#include "../common/nav.ftl">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <h3>商品类别列表</h3>
             </div>
             <table class="table">
                 <thead>

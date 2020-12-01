@@ -1,4 +1,4 @@
-package com.company.springbootsell.Controller;
+package com.company.springbootsell.controller;
 
 import com.company.springbootsell.dataobject.ProductInfo;
 import com.company.springbootsell.services.ProductService;
@@ -23,11 +23,11 @@ public class SellerProductController {
     ProductService productService;
     @GetMapping("/list")
     public ModelAndView list(@RequestParam(value = "page",defaultValue = "1")Integer page,
-                             @RequestParam(value = "size",defaultValue = "10")Integer size,
+                             @RequestParam(value = "size",defaultValue = "5")Integer size,
                              Map<String,Object> map){
         PageRequest pageRequest=PageRequest.of(page-1,size);
         Page<ProductInfo> productInfoPage=productService.findAll(pageRequest);
-        map.put("ProductInfoPage",productInfoPage);
+        map.put("productInfoPage",productInfoPage);
         map.put("currentPage",page);
         map.put("size",size);
         return new ModelAndView("product/list",map);
