@@ -70,15 +70,14 @@
                             <#else>
                                 <li><a href="/seller/product/list?page=${index}&size=${size}">${index}</a></li>
                             </#if>
-
                         </#list>
-
 
                         <#if currentPage gte productInfoPage.getTotalPages()>
                             <li class="disabled"><a href="#">下一页</a></li>
                         <#else >
                             <li ><a href="/seller/product/list?page=${currentPage+1}&size=${size}">下一页</a></li>
                         </#if>
+
                     </ul>
                 </div>
 
