@@ -35,4 +35,9 @@ public class UsersController {
         }
         return mv;
     }
+
+    @GetMapping("/logon")
+    public ModelAndView logonPage(){
+        return new ModelAndView("user/logon");
+    }
 }
