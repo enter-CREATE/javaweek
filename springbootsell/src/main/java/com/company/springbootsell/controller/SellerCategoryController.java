@@ -37,46 +37,46 @@ public class SellerCategoryController {
         return new ModelAndView("category/list", map);
     }
 
-//    @GetMapping("/index")
-//    public ModelAndView save(@RequestParam(value = "categoryId",required = false)Integer categoryId,
-//                             Map<String ,Object> map){
-//        if (!StringUtils.isEmpty(categoryId)){
-//            //修改
-//            ProductCategory productCategory=categoryService.findOne(categoryId);
-//            map.put("productCategory",productCategory);
-//        }
-//        return new ModelAndView("category/index");
-//    }
-//
-//    @PostMapping("/save")
-//    public ModelAndView save(@Valid CategoryForm form,
-//                             BindingResult bindingResult,
-//                             Map<String,Object> map){
-//        if (bindingResult.hasErrors()){
-//            //返回错误页面
-//            map.put("msg",bindingResult.getFieldError().getDefaultMessage());
-//            map.put("url","/seller/category/index");
-//            return new ModelAndView("common/error");
-//        }
-//        ProductCategory productCategory=new ProductCategory();
-//        try{
-//            if (!StringUtils.isEmpty(form.getCategoryId())){
-//                //有id 修改
-//                productCategory=categoryService.findOne(form.getCategoryType());
-//            }else{
-//                //新增加  生成一个id
-//                form.setCategoryType(Integer.valueOf(KeyUtil.genUniqueKey()));
-//            }
-//
-//            BeanUtils.copyProperties(form,productCategory);
-//            categoryService.save(productCategory);
-//        }catch (SellException exception){
-//            map.put("msg",exception.getMessage());
-//            map.put("url","/seller/category/index");
-//            return new ModelAndView("common/error",map);
-//        }
-//        map.put("url","seller/category/index");
-//        return new ModelAndView("common/success",map);
-//
-//    }
+    @GetMapping("/index")
+    public ModelAndView save(@RequestParam(value = "categoryId",required = false)Integer categoryId,
+                             Map<String ,Object> map){
+        if (!StringUtils.isEmpty(categoryId)){
+            //修改
+            ProductCategory productCategory=categoryService.findOne(categoryId);
+            map.put("productCategory",productCategory);
+        }
+        return new ModelAndView("category/index");
+    }
+
+    @PostMapping("/save")
+    public ModelAndView save(@Valid CategoryForm form,
+                             BindingResult bindingResult,
+                             Map<String,Object> map){
+        if (bindingResult.hasErrors()){
+            //返回错误页面
+            map.put("msg",bindingResult.getFieldError().getDefaultMessage());
+            map.put("url","/seller/category/index");
+            return new ModelAndView("common/error");
+        }
+        ProductCategory productCategory=new ProductCategory();
+        try{
+            if (!StringUtils.isEmpty(form.getCategoryId())){
+                //有id 修改
+                productCategory=categoryService.findOne(form.getCategoryId());
+            }else{
+                //新增加  生成一个id
+                form.setCategoryId(KeyUtil.inGenUniqueKey());
+            }
+
+            BeanUtils.copyProperties(form,productCategory);
+            categoryService.save(productCategory);
+        }catch (SellException exception){
+            map.put("msg",exception.getMessage());
+            map.put("url","/seller/category/index");
+            return new ModelAndView("common/error",map);
+        }
+        map.put("url","seller/category/list");
+        return new ModelAndView("common/success",map);
+
+    }
 }
