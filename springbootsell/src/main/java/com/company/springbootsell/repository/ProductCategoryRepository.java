@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ProductCategoryRepository extends JpaRepository<ProductCategory,Integer> {
     // categoryType
-    List<ProductCategory> findByCategoryTypeIn(List<Integer> catergoryList);
+    List<ProductCategory> findByCategoryTypeIn(List<Integer> categoryList);
 }
