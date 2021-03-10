@@ -94,14 +94,14 @@
 <body>
 <div class="first">
     <img src="./img/login.png" alt="">
-    <form class="second" method="post">
+    <form class="second" method="post" role="form" action="">
         <div class="s_first"><span>用户登录</span></div>
 
         <div class="input_content">
-            <div>
+            <div id="name">
                 <input type="text" autocomplete="off" placeholder="用户名" name="name" required="required"/>
             </div>
-            <div style="margin-top: 16px">
+            <div id="password" style="margin-top: 16px">
                 <input type="password"
                        autocomplete="off" placeholder="登录密码"
                        name="password" required="required" maxlength="32"/>
