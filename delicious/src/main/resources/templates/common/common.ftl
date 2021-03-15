@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>menu</title>
     <link rel="stylesheet" href="../../static/css/style_menu.css">
 </head>
 <body>
@@ -27,7 +27,7 @@
 </div>
 <div class="body">
     <ul id="nav">
-        <li><a href="#">首页</a></li>
+        <li><a href="../menu/menu.ftl">首页</a></li>
         <li class="dropdown">
             <a href="#" class="dropbtn">美食浏览</a>
             <div class="dropdown-content">

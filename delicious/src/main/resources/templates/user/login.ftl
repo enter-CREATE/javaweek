@@ -7,13 +7,13 @@
 </head>
 <body>
 <div class="first">
-    <img src="images/login.png" alt="">
+    <img src="../../static/images/login.png" alt="">
     <form class="second" method="post" role="form" action="/delicious/user/login">
         <div class="s_first"><span>用户登录</span></div>
 
         <div class="input_content">
             <div id="na">
-                <input type="text" autocomplete="off" placeholder="用户名" name="name" required="required"/>
+                <input type="text" autocomplete="off" placeholder="用户名" name="userName" required="required"/>
             </div>
             <div id="pw" style="margin-top: 16px">
                 <input type="password"

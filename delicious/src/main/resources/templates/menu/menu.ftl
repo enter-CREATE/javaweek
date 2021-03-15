@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="../../static/css/style_menu.css">
-    <#include "../common/common.ftl.html">
+    <#include "../common/common.ftl">
 </head>
 <body>
 <div class="container">

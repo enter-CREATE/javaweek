@@ -24,11 +24,10 @@ public class UserController {
     public ModelAndView login(@Valid User user,ModelAndView mv){
         User user1=userService.findByUserNameAndPassword(user.getUserName(),user.getPassword());
         if (user1!=null){
-            mv.setViewName("redirect:/");
+            mv.setViewName("redirect:/delicious/menu/menu");
         }else{
             mv.setViewName("redirect:/delicious/user/");
         }
         return mv;
     }
-
 }
