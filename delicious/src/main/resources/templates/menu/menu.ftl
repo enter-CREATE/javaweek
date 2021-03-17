@@ -12,13 +12,13 @@
 <body>
 <div class="container">
     <div class="wrap" style="left: -600px;">
-        <img src="images/5.jpg" alt="">
-        <img src="images/1.jpg" alt="">
-        <img src="images/2.jpg" alt="">
-        <img src="images/3.jpg" alt="">
-        <img src="images/4.jpg" alt="">
-        <img src="images/5.jpg" alt="">
-        <img src="images/1.jpg" alt="">
+        <img src="../../static/images/5.jpg" alt="">
+        <img src="../../static/images/1.jpg" alt="">
+        <img src="../../static/images/2.jpg" alt="">
+        <img src="../../static/images/3.jpg" alt="">
+        <img src="../../static/images/4.jpg" alt="">
+        <img src="../../static/images/5.jpg" alt="">
+        <img src="../../static/images/1.jpg" alt="">
     </div>
     <div class="buttons">
         <span class="on">1</span>

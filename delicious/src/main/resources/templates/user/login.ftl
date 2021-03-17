@@ -24,6 +24,7 @@
         <div style="text-align: center">
             <button id="smart1" type="submit" class="enter-btn" >登录</button>
         </div>
+
         <div class="foo">
             <div style="float: left;"><span>忘记密码 ?</span></div>
             <div style="float: right;"><span>注册账户</span></div>

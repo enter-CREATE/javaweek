@@ -12,7 +12,7 @@
 <div class="head">
     <div class="head_top">
         <div class="head_top_1">
-            <span>欢迎用户...</span>
+            <span>欢迎用户</span>
         </div>
     </div>
     <div class="head_body">
@@ -22,7 +22,7 @@
                 <button type="submit">搜索</button>
             </form>
         </div>
-        <div class="pic"><img src="images/pic.jpg" alt=""></div>
+        <div class="pic"><img src="../../static/images/pic.jpg" alt=""></div>
     </div>
 </div>
 <div class="body">
