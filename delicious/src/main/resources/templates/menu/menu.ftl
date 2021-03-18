@@ -10,6 +10,10 @@
     <#include "../common/common.ftl">
 </head>
 <body>
+<div class="left">
+    <div class="left_top"><img src="../../static/images/top.jpg" alt=""></div>
+    <div class="left_button"><img src="../../static/images/button.jpg" alt=""></div>
+</div>
 <div class="container">
     <div class="wrap" style="left: -600px;">
         <img src="../../static/images/5.jpg" alt="">
@@ -29,6 +33,12 @@
     </div>
     <a href="javascript:;" class="arrow arrow_left"><</a>
     <a href="javascript:;" class="arrow arrow_right">></a>
+</div>
+<div class="right">
+    <span>今日推荐</span>
+    <img src="../../static/images/right.jpg" alt="">
+    <p class="right_p1">炸酱面</p>
+    <p class="right_p2">面条爽滑筋道，口味酱香醇浓</p>
 </div>
 </div>
 <script>

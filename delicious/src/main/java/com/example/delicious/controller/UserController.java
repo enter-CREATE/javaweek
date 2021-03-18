@@ -18,7 +18,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/")
-    public ModelAndView loginPage(){return new ModelAndView("user/login");}
+    public ModelAndView loginPage(){
+        return new ModelAndView("user/login");
+    }
 
     @PostMapping("/login")
     public ModelAndView login(@Valid User user,ModelAndView mv){

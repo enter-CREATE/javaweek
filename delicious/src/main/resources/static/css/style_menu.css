@@ -208,3 +208,52 @@ a{
 .container .arrow:hover {
     background-color: rgba(0,0,0,0.2);
 }
+/*中左框*/
+.left{
+    width: 270px;
+    height: 404px;
+    position: absolute;
+    left: 165px;
+    top: 280px;
+}
+.left_top{
+    width: 270px;
+    height:202px;
+}
+.left_top img{
+    width: 100%;
+    height: 100%;
+}
+.left_button{
+    width: 270px;
+    height:202px;
+}
+.left_button img{
+    width: 100%;
+    height: 100%;
+}
+.right{
+    width: 270px;
+    height: 404px;
+    position: absolute;
+    left: 1096px;
+    top: 280px;
+    border: 1px solid black;
+}
+.right span{
+    font-size: 22px;
+    margin-left: 88px;
+}
+.right img{
+    width: 270px;
+    height: 270px;
+    margin-top:25px;
+}
+.right_p1{
+    margin-left: 98px;
+    font-size: 22px;
+}
+.right_p2{
+    margin-top: 10px;
+    margin-left: 30px;
+}
