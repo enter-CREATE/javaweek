@@ -27,7 +27,7 @@
 </div>
 <div class="body">
     <ul id="nav">
-        <li><a href="../menu/menu.ftl">首页</a></li>
+        <li><a href="http://localhost:8888/delicious/menu/menu">首页</a></li>
         <li class="dropdown">
             <a href="#" class="dropbtn">美食浏览</a>
             <div class="dropdown-content">
