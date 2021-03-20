@@ -1,0 +1,45 @@
+/* 版心区域宽1190 水平居中 */
+.w{
+    width:1190px;
+    margin:0 auto;
+}
+*{margin: 0;padding: 0;}
+/* 清除浮动的通用代码 */
+.clearfix::after{
+    content:".";
+    height: 0;
+    visibility:hidden;
+    display:block;
+    clear:both;
+}
+.clearfix{*zoom:1;}
+/* IE6 7专用 */
+.box{
+    width: 1190px;
+    height: 560px;
+    margin: auto;
+}
+.table{
+    width: 280px;
+    height: 280px;
+    float: left;
+}
+/*鼠标放上，图片放大*/
+.table tr td img{
+    width: 180px;
+    height: 180px;
+    background-color: blue;
+    margin-top: 80px;
+    margin-left: 60px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.table tr td img:hover{
+    transform: scale(1.2);
+}
+.table tr td div{
+    width: 280px;
+    height: 140px;
+    background-color: coral;
+    margin: 20px auto 0;
+}

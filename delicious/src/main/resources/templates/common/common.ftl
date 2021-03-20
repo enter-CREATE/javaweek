@@ -29,7 +29,7 @@
     <ul id="nav">
         <li><a href="http://localhost:8888/delicious/menu/menu">首页</a></li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">美食浏览</a>
+            <a href="http://localhost:8888/delicious/detail/list" class="dropbtn">美食浏览</a>
             <div class="dropdown-content">
                 <a href="w">主食</a>
                 <a href="w">各地小吃</a>
