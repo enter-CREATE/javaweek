@@ -23,13 +23,9 @@ public class CulinaryTreasures {
      */
     private String delicacyImg;
     /**
-     * 详情
+     * 详情步骤
      */
     private String culinaryExplain;
-    /**
-     * 烹饪工具
-     */
-    private String culinaryTools;
     /**
      * 主料
      */

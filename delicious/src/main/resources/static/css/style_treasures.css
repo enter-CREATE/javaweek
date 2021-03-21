@@ -24,22 +24,34 @@
     height: 280px;
     float: left;
     background-color: darksalmon;
+    border-spacing: 2px;
 }
-/*鼠标放上，图片放大*/
 .table tr td img{
     width: 180px;
     height: 180px;
-    margin-top: 80px;
-    margin-left: 60px;
+    margin-top: 60px;
+    margin-left: 10px;
     cursor: pointer;
     transition: all 0.6s;
 }
 .table tr td img:hover{
     transform: scale(1.2);
 }
-.table tr td div{
-    width: 280px;
-    height: 140px;
+.float{
+    width: 550px;
+    height: 150px;
+    margin-top: -210px;
+}
+.float p{
+    font-size: 18px;
+    margin-left: 240px;
+    margin-top: 40px;
     background-color: coral;
-    margin: 20px auto 0;
+}
+.ex{
+    width: 560px;
+    height: 220px;
+    margin-top: 40px;
+    font-size: 18px;
+    background-color: coral;
 }

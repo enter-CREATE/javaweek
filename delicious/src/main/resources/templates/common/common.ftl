@@ -33,7 +33,6 @@
             <div class="dropdown-content">
                 <a href="w">主食</a>
                 <a href="w">各地小吃</a>
-                <a href="w">甜点布丁</a>
             </div>
         </li>
         <li class="dropdown">
@@ -44,10 +43,9 @@
             </div>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">烹饪宝典</a>
+            <a href="http://localhost:8888/delicious/treasures/list" class="dropbtn">烹饪宝典</a>
             <div class="dropdown-content">
                 <a href="w">中华菜谱</a>
-                <a href="w">外国菜谱</a>
             </div>
         </li>
         <li><a href="#">美食新闻</a></li>
