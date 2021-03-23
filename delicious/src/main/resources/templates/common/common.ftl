@@ -12,13 +12,13 @@
 <div class="head">
     <div class="head_top">
         <div class="head_top_1">
-            <span>欢迎用户</span>
+            <span>欢迎访问本站</span>
         </div>
     </div>
     <div class="head_body">
         <div class="search">
-            <form action="#">
-                <input type="text">
+            <form action="/delicious/detail/select">
+                <input type="text" name="delicacy_detail">
                 <button type="submit">搜索</button>
             </form>
         </div>

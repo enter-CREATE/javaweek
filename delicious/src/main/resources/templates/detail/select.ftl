@@ -11,8 +11,8 @@
 </head>
 <body>
 <div class="box">
-    <#list detailList as detail>
-    <table class="table">
+    <#list unit as detail>
+        <table class="table">
             <td><img src="${detail.delicacyImg}" alt="">
                 <div>
                     <a href="http://localhost:8888/delicious/treasures/selects?delicacy_detail=${detail.delicacyName}">${detail.delicacyName}</a>
@@ -24,7 +24,7 @@
                     </p>
                 </div>
             </td>
-    </table>
+        </table>
     </#list>
 </div>
 </body>

@@ -7,6 +7,7 @@ import com.example.delicious.services.DetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,5 +31,10 @@ public class DetailServiceImpl implements DetailService {
     public Page<DelicacyDetail> findAll(Pageable pageable) {
         Page<DelicacyDetail> DelicacyDetailPage =repository.findAll(pageable);
         return DelicacyDetailPage;
+    }
+
+    @Override
+    public List<DelicacyDetail> findByName(@Param("delicacy_name") String delicacy_name){
+        return repository.findByName(delicacy_name);
     }
 }
