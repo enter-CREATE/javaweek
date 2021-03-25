@@ -36,7 +36,7 @@
             </div>
         </li>
         <li class="dropdown">
-            <a href="#" class="dropbtn">美食文化</a>
+            <a href="/culture/list" class="dropbtn">美食文化</a>
             <div class="dropdown-content">
                 <a href="w">中国文化</a>
                 <a href="w">外国文化</a>
@@ -48,8 +48,8 @@
                 <a href="w">中华菜谱</a>
             </div>
         </li>
-        <li><a href="#">美食新闻</a></li>
-        <li><a href="#">更多</a></li>
+        <li><a href="/delicacy/news/news">美食新闻</a></li>
+        <li><a href="/delicacy/journals/journals">美食日志</a></li>
     </ul>
 </div>
 </body>
