@@ -37,4 +37,9 @@ public class DetailServiceImpl implements DetailService {
     public List<DelicacyDetail> findByName(@Param("delicacy_name") String delicacy_name){
         return repository.findByName(delicacy_name);
     }
+
+    @Override
+    public DelicacyDetail save(DelicacyDetail delicacyDetail){
+        return repository.save(delicacyDetail);
+    }
 }

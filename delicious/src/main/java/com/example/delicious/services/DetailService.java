@@ -16,4 +16,6 @@ public interface DetailService {
     Page<DelicacyDetail> findAll(Pageable pageable);
     //通过菜名查询
     List<DelicacyDetail> findByName(@Param("delicacy_name") String delicacy_name);
+    //新加菜品
+    DelicacyDetail save(DelicacyDetail delicacyDetail);
 }
